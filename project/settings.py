@@ -81,9 +81,19 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
+    # pip install psycopg2
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': env('db_name'),
+
+        'USER': env('db_user'),
+
+        'PASSWORD': env('db_password'),
+
+        'HOST': env('db_host'),
+
+        'PORT': env('db_port'),
     }
 }
 
