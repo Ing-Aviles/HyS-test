@@ -1,0 +1,16 @@
+venv_hys_test/
+
+static/
+
+*/migrations/
+*/__pycache__/
+
+db.sqlite3
+
+.env
+
+.tmp.driveupload/
+.tmp.drivedownload/
+.vscode
+
+initial.txt
